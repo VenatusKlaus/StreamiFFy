@@ -1,7 +1,8 @@
 body{
     background: black;
     margin: auto;
-    border: solid 20px rgb(51, 50, 50);
+    /* border: solid 10px rgb(51, 50, 50); */
+    height: 100%;
 }
 .mainb{
     background: url('./assets/images/starwars_uusi_vaaka.jpg') no-repeat center center / cover;
@@ -221,13 +222,11 @@ a{
 
 #navcontent{
     position: absolute;
-    height: 95%;
-    width: 25%;
-    margin-top: -87.5%;
-    left: 20;
+    height: 100vh;
+    width: 50%;
+    min-width: 40%;
+    top: 0;
     background: rgb(51, 50, 50);
-    border-radius: 2.5%;
-    line-height: 200%;
     opacity: 0.99;
     display: none;
 }
@@ -238,19 +237,39 @@ a{
     font-size: 30px;
 }
 .lists{
-    margin: 50% 10%;
+    margin: 40% 10%;
     font-size: 20px;
-    line-height: 150%;
+    line-height: 50px;
     a{
-        color: #000;
+       color: #fff;
     }
     a:hover{
-        color: #fff;
         font-size: 25px;
         transition: 0.2s;
     }
 }
 
+.buton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    button{
+        padding: 15px;
+        margin: 15px 5px 5px 5px;
+        border-radius: 1rem;
+        font-weight: bolder;
+        background: rgba(33, 222, 150, 0.803);
+        color: rgb(196, 199, 199);
+        border: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+@media (min-width: 769px) {
+    .buton{
+        display: none;
+    }
+}
 @media (max-width: 768px) {
     .dbars{
         .fsb{
@@ -279,6 +298,9 @@ a{
                 width: 80%;
             }
         }
+    }
+    .laslas{
+        display: none;
     }
 }
 @media (min-width: 769px) and (max-width: 888px) {
